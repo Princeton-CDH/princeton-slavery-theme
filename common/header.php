@@ -35,19 +35,25 @@
 
   <?php
   ($backgroundColor = get_theme_option('background_color')) || ($backgroundColor = "#FFFFFF");
-  ($backgroundImage = get_theme_option('background_image')) || ($backgroundColor = "#FFFFFF");
+  ($backgroundImage = get_theme_option('background_image'));
   ($textColor = get_theme_option('text_color')) || ($textColor = "#444444");
   ($linkColor = get_theme_option('link_color')) || ($linkColor = "#888888");
   ($buttonColor = get_theme_option('button_color')) || ($buttonColor = "#000000");
   ($buttonHoverColor = get_theme_option('button_color_hover')) || ($buttonColor = "#000000");
   ($buttonTextColor = get_theme_option('button_text_color')) || ($buttonTextColor = "#FFFFFF");
   ($titleColor = get_theme_option('header_title_color')) || ($titleColor = "#000000");
+  ($headerBackgroundImage = get_theme_option('header_background'));
+  ($headerBackgroundColor = get_theme_option('header_background_color')) || ($headerBackgroundColor = "#111111");
   ?>
   <style>
     body {
       background-color: <?php echo $backgroundColor; ?>;
       background-image: url('/files/theme_uploads/<?php echo $backgroundImage; ?>');
       color: <?php echo $textColor; ?>;
+    }
+    header {
+      background-color: <?php echo $headerBackgroundColor; ?>;
+      background-image: url('/files/theme_uploads/<?php echo $headerBackgroundImage; ?>');
     }
     #site-title a:link, #site-title a:visited,
     #site-title a:active, #site-title a:hover {
